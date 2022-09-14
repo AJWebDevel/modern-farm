@@ -7,16 +7,14 @@ let cornSeed = createCorn
 const plantsInField = []
 
 //function to be exported that adds seed to field
-export const addPlant = (plantObj) => {
-    for (let plant of plantObj) {
-        if (array.isArray(plant)) {
-            for (let singularPlant of plant)
-                plantsInField.push(singularPlant)
+export const addPlant = (seedObj) => {
+    if (Array.isArray(seedObj)) {
+        for (let seed of seedObj) {
+            plantsInField.push(seed)
 
-        } else {
-            plantsInField.push(plantObj)
         }
-        return plantsInField
+    } else {
+        plantsInField.push(seedObj)
     }
 }
 

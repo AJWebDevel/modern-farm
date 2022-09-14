@@ -3,10 +3,11 @@
 import { createAsparagus } from './seeds/asparagus.js'
 import { addPlant } from './field.js'
 import { usePlants } from './field.js'
+import { plantSeeds } from './tractor.js'
+import { createPlan } from './plan.js'
 
-const asparagusSeed = createAsparagus()
-const addFieldPlant = addPlant(asparagusSeed)
-const usedPlants = usePlants()
+const farmPlan = createPlan()
 
-console.log(usedPlants)
 
+plantSeeds(farmPlan)
+console.log(usePlants())
