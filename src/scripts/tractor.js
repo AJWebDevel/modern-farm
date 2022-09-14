@@ -1,5 +1,5 @@
 //Import seed-making functions & store them in variables 
-import { addPlant } from "./field"
+import { addPlant } from "./field.js"
 import { createPlan } from "./plan.js"
 import { createAsparagus } from "./seeds/asparagus.js"
 import { createCorn } from "./seeds/corn.js"
@@ -21,19 +21,19 @@ const wheatCreator = createWheat()
 will accept one parameter which is planting plan. */
 export const plantSeeds = (plantingPlan) => {
     for (const row of plantingPlan) {
-        for (const seed of row) {
-            if (seed === "Asparagus") {
-                addPlant(seed)
-            } else if (seed === "Corn") {
-                addPlant(seed)
-            } else if (seed === "Potato") {
-                addPlant(seed)
-            } else if (seed === "Soybean") {
-                addPlant(seed)
-            } else if (seed === "Sunflower") {
-                addPlant(seed)
-            } else if (seed === "Wheat") {
-                addPlant(seed)
+        for (const foodType of row) {
+            if (foodType === "Asparagus") {
+                addPlant(asparagusCreator)
+            } else if (foodType === "Corn") {
+                addPlant(cornCreator)
+            } else if (foodType === "Potato") {
+                addPlant(potatoCreator)
+            } else if (foodType === "Soybean") {
+                addPlant(soybeanCreator)
+            } else if (foodType === "Sunflower") {
+                addPlant(sunflowerCreator)
+            } else if (foodType === "Wheat") {
+                addPlant(wheatCreator)
             }
         }
     }

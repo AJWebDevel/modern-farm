@@ -11,7 +11,6 @@ export const addPlant = (seedObj) => {
     if (Array.isArray(seedObj)) {
         for (let seed of seedObj) {
             plantsInField.push(seed)
-
         }
     } else {
         plantsInField.push(seedObj)
