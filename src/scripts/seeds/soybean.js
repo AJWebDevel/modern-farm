@@ -1,3 +1,4 @@
+//function to create soybean seed that returns seedObj
 export const createSoybean = () => {
     let soybeanSeedObject = {
         type: "Soybean",
