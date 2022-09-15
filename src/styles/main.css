@@ -7,15 +7,20 @@ button,
 input,
 select,
 textarea {
-	color: #404040;
-	font-family: "Comfortaa", Arial, sans-serif;
-	font-size: 14px;
-	line-height: 1.5;
+    color: #404040;
+    font-family: "Comfortaa", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
 }
 
-h1,h2,h3,h4,h5,h6 {
-  font-family: "Patua One", serif;
-  letter-spacing: 2px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Patua One", serif;
+    letter-spacing: 2px;
 }
 
 .blue {
@@ -34,3 +39,16 @@ h1,h2,h3,h4,h5,h6 {
     background-color: darksalmon;
 }
 
+.messages {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: large;
+}
+
+.plant {
+    margin: 15px;
+}
+
+body {
+    background-color: #fbfbd3;
+}

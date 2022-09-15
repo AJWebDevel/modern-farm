@@ -17,9 +17,13 @@ const sunflowerCreator = createSunflower()
 const wheatCreator = createWheat()
 
 
-/*function to be exported that plants seeds (plantSeeds)-
-will accept one parameter which is planting plan. */
+/*function to be exported that plants seeds (plantSeeds)- will accept one parameter
+ which is planting plan. */
 export const plantSeeds = (plantingPlan) => {
+    /* w/in function, iterate through the plan (consisting of an outer and inner array). 
+    While iterating rows, if food type from plan is a seed function, invoke said seed-maker. 
+    Add resulting seed to plantsInField array in fields.js
+    */
     for (const row of plantingPlan) {
         for (const foodType of row) {
             if (foodType === "Asparagus") {
@@ -38,8 +42,3 @@ export const plantSeeds = (plantingPlan) => {
         }
     }
 }
-    /* w/in function, iterate through the plan (consisting of an
-outer and inner array). While iterating rows, if food type from plan 
-is a seed function, invoke said seed-maker. 
-Add resulting seed to plantsInField array in fields.js
-*/
